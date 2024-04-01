@@ -1,9 +1,23 @@
-import React from "react"
-import { Text } from "react-native"
+import React, { Component } from "react"
+import { StyleSheet, Text, View } from "react-native"
+import params from "./src/params"
 
 
-export default props => {
-  return (
-    <Text>React Native</Text>
-  )
+export default class App extends Component {
+  render() {
+    return (
+      <View>
+        <Text>Iniciando o Mines!!!</Text>
+          <Text style={styles.instructions}>
+          Tamanho da grade: {params.getRowsAmount()} X {params.getColumnsAmount()}
+          </Text>
+      </View>
+    )
+  }
 }
+
+const styles = StyleSheet.create({
+  instructions: {
+
+  },
+})
